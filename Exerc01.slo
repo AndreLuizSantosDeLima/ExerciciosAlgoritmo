@@ -1,0 +1,26 @@
+início {
+    inteiro: num1;
+    inteiro: soma;
+    inteiro: cont;
+    cont =0;
+    soma = 0;
+    lógico:teste;
+    teste = verdadeiro;
+    enquanto(teste){
+        leia("Entre com um número interio:",num1);
+        
+        se(num1>0){
+          soma =soma + num1;  
+          cont ++;
+        }senão{
+        teste = falso;
+        }
+        
+    }
+    escreva("A média aritmetica é :"+ mediaAritmetica(soma,cont));
+    
+}
+função mediaAritmetica(inteiro: soma,inteiro: cont) -> inteiro{
+ retorne (soma/cont);
+ 
+}
