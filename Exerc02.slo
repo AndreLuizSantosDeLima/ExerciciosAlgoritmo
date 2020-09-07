@@ -1,0 +1,89 @@
+tipo dados {
+    real:salario;
+    inteiro:qtdfilhos;
+    
+}
+início {
+  
+    
+    inteiro:totalfilhos;
+    totalfilhos = 0;
+    inteiro: cont;
+    cont = 0;
+    real: menorSalario;
+    menorSalario = 9999999;
+    real: soma_salarios;
+    soma_salarios = 0;
+    caractere: estado;
+    caractere: continuar;
+    continuar ="";
+    lógico:teste;
+    teste = verdadeiro;
+    inteiro: rendamedia;
+    rendamedia = 0;
+    caractere:opcaomenu;
+    
+    dados: c;
+    
+    enquanto(teste){
+        escreva("Bem-vindo ao censo.");
+        
+        leia("Entre com o valor do seu sálario",c.salario);
+        
+        enquanto(c.salario < 0){
+            leia("Valor ínvalido.Digite novamente!",c.salario);
+            se(c.salario > 0){
+                cont++;
+                soma_salarios = soma_salarios + c.salario ;
+               
+                
+            }
+             se(c.salario < 1091){
+                rendamedia ++;
+            }
+            se(menorSalario > c.salario){
+                menorSalario = c.salario;
+            }
+            
+            
+        }
+        
+        cont++;
+        soma_salarios = soma_salarios + c.salario;
+        leia("Entre com a quantidade de filhos que possue",c.qtdfilhos);
+        enquanto(c.qtdfilhos < 0){
+            leia("Valor digitado invalido.Digite novamente.",c.qtdfilhos);
+        }
+        totalfilhos = totalfilhos + c.qtdfilhos;
+        leia("Dejesa cadastrar mais alguem 1-SIM 2-NÃO",continuar);
+        enquanto(continuar <> "1" e continuar <> "sim" e continuar <> "2" e continuar <> "não"){
+        leia("Opção digitada invalida.Digite novamente por favor.",continuar);
+        }
+        se(continuar == "1" ou continuar == "sim"){
+         teste = verdadeiro;   
+        }senão{
+         teste = falso;   
+        }
+        
+    }
+    escreva("Qual dessa informações vc deseja saber");
+    leia("1-Média do salário da população 2-Média de número de filhos 3-Menor salário 4-Percentual de pessoas com salário ate 1090",opcaomenu);
+    se(opcaomenu == "1"){
+     escreva("A média do salário da população é:"+mediaSalario(soma_salarios,cont));   
+    }
+    se(opcaomenu == "2"){
+         escreva("A média de filhos da população é:"+mediaFilhos(totalfilhos,cont));
+    }
+    se(opcaomenu == "3"){
+     escreva("O menor salário do censo foi de:"+menorSalario);   
+    }
+    se(opcaomenu == "4"){
+        escreva("O quantidade de pessoas que recebem 1090 ou menos é "+rendamedia);
+    }
+}    
+função mediaSalario(real:salarios,inteiro:contador) -> real{
+    retorne(salarios/contador);
+}
+função mediaFilhos(inteiro:somafilhos,inteiro:contador)-> inteiro{
+    retorne(somafilhos/contador);
+}
