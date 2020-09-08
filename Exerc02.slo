@@ -11,7 +11,7 @@ início {
     inteiro: cont;
     cont = 0;
     real: menorSalario;
-    menorSalario = 9999999;
+   menorSalario = 0;
     real: soma_salarios;
     soma_salarios = 0;
     caractere: estado;
@@ -32,7 +32,9 @@ início {
         
         enquanto(c.salario < 0){
             leia("Valor ínvalido.Digite novamente!",c.salario);
-            se(c.salario > 0){
+            
+        }
+         se(c.salario > 0){
                 cont++;
                 soma_salarios = soma_salarios + c.salario ;
                
@@ -41,12 +43,11 @@ início {
              se(c.salario < 1091){
                 rendamedia ++;
             }
-            se(menorSalario > c.salario){
+            se(menorSalario == 0){
                 menorSalario = c.salario;
+            }senão se(menorSalario > c.salario){
+            menorSalario =  c.salario;
             }
-            
-            
-        }
         
         cont++;
         soma_salarios = soma_salarios + c.salario;
