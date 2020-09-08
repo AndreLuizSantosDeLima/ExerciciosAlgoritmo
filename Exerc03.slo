@@ -1,0 +1,31 @@
+início {
+    inteiro:num;
+    inteiro:cont;
+    lógico:teste;
+    teste = verdadeiro;
+    inteiro:maiorValor;
+    maiorValor = 0;
+    inteiro:menorValor;
+    menorValor = -1;
+    inteiro: soma;
+    soma= 0;
+    cont = 0;
+   para cont de 1 até 20 passo 1 {
+    leia ("Entre com um número positivo ",num);   
+    enquanto(num < 0){
+        leia ("Entre com um número positivo ",num);  
+    }soma = soma + num;
+    se(menorValor == -1 ou menorValor > num){
+    menorValor = num;
+    }
+    se(maiorValor < num){
+    maiorValor = num;
+    }
+   }
+   escreva("O menor valor informado é:"+ menorValor);
+   escreva("==================================");
+   escreva("O maior valor informado é:"+ maiorValor);
+   escreva("==================================");
+   escreva("A média dos números informado é:" +(soma/cont));
+    
+}
