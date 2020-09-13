@@ -1,0 +1,14 @@
+início {
+    inteiro:num1;
+    num1 = 300;
+    inteiro:num2;
+    num2 = 300;
+    para num1 de 1 até 301 passo 1 {
+    se(num2%2 == 0){
+        escreva(num2);
+    }
+   
+    num2++;    
+   
+   }
+}

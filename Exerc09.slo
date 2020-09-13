@@ -1,0 +1,26 @@
+tipo dados{
+ inteiro:codigoP;
+ real:precoP;
+ inteiro:aumento;
+ lógico:teste;
+ real:precoN;
+ 
+}
+início {
+    inteiro:cont;
+    cont = 0;
+    dados:info;
+    info.aumento = 35;
+    info.teste = verdadeiro;
+    enquanto(info.teste){
+        leia("Entre com o código do produto:",info.codigoP);
+        se(info.codigoP < 0)
+        {
+            info.teste = falso;
+        }
+        leia("Entre com o valor do Produto:",info.precoP);
+        info.precoN = (info.aumento/100)*info.precoP;
+        
+    }
+    
+}
