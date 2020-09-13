@@ -1,0 +1,23 @@
+tipo dados{
+  caractere: nome;  
+  real:valorComprado;  
+  real:porcentagem;
+  real:valorDesconto;
+ 
+}
+início {
+    dados: info;
+    inteiro:cont;      
+  
+  
+  para cont de 1 até 100 passo 1{
+    leia("Entre com seu nome",info.nome);
+    leia("Entre com o valor que foi comprado:",info.valorComprado); 
+    
+   se(info.valorComprado < 500.00 e info.valorComprado > 0){
+       info.porcentagem = 10;
+       info.valorDesconto = (info.porcentagem/100)*info.valorComprado;
+      escreva("O bônus é de :" + info.valorDesconto); 
+  } 
+  }
+}

@@ -7,8 +7,6 @@ tipo dados{
     inteiro: qtdHomens;
     inteiro: idadesH;
     inteiro: idadesM;
-    
-
 }
 tipo altura{
     real= alturaH;
@@ -37,7 +35,7 @@ início {
         enquanto(info.sexo <> "0" e info.sexo <> "Feminino" e info.sexo <> "1" e info.sexo <> "masculino" e info.sexo <> "Feminino" e info.sexo <> " Masculino")
         {
             leia("Opção invalida.Digite uma opção válida!",info.sexo);
-        }//mulheres informações
+        }
         se(info.sexo == "0" ou info.sexo == "feminino" ou info.sexo == "Feminino"){
             info.qtdMulheres ++;
             escreva("============================================");
@@ -50,7 +48,7 @@ início {
             info.idadeM = info.idadeM + info.idade;
             info.alturaM = info.alturaM + info.altura;
             
-        }//homens informações
+        }
         senão se (info.sexo == "1" ou info.sexo == "masculino" ou info.sexo == "Masculino"){
             info.qtdHomens ++;
             escreva("============================================");
@@ -60,7 +58,7 @@ início {
             enquanto(info.altura < 0){
                 leia("Altura invalida!Entre com a sua altura:",info.altura);
             }
-           
+            
             info.alturaH = info.alturaH + info.altura;
             info.idadeH = info.idadeH + info.idade;
         }

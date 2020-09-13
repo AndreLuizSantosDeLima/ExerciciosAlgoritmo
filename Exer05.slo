@@ -1,0 +1,11 @@
+tipo dados{
+    inteiro: codigoCidade;
+    caractere: estado;
+    inteiro: qtdVeiculos;
+    inteiro: qtdVitimas;
+}
+início {
+    escreva("Seja bem vindo!");
+    escreva("Entre com as informações requisitada");
+    
+}
