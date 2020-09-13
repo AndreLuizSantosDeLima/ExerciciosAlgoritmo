@@ -17,7 +17,13 @@ início {
    se(info.valorComprado < 500.00 e info.valorComprado > 0){
        info.porcentagem = 10;
        info.valorDesconto = (info.porcentagem/100)*info.valorComprado;
-      escreva("O bônus é de :" + info.valorDesconto); 
-  } 
+       escreval(info.nome + " o ");
+      escreva("bônus é de :" + info.valorDesconto); 
+  } senão se (info.valorComprado > 500){
+      info.porcentagem = 15;
+      info.valorDesconto = (info.porcentagem/100)*info.valorComprado;
+      escreval(info.nome + " o ");
+      escreva("bônus é de :" + info.valorDesconto);
+  }
   }
 }
