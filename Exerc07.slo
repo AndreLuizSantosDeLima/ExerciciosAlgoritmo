@@ -1,0 +1,19 @@
+início {
+    real:nota[35];
+    inteiro: num;
+    num = 34;
+    inteiro:cont;
+    cont = 0;
+    para num de 0 até 34 passo 1{
+        escreva("Entre com a nota do "+num +"º aluno.");
+       real:n1;
+       real:n2;
+       real:n3;
+       real:mp;
+          leia("Entre com a Primeira nota",n1);
+          leia("Entre com a Segunda nota",n2);
+          leia("Entre com a Terceira nota",n3);
+      mp = ((n1*2)+(n2*4)+(n3*3))/10;
+      escreva("A média poderada é "+ mp);
+    }
+}
